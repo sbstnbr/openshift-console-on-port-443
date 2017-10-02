@@ -49,7 +49,7 @@ $ sed -i 's@https://<ose-master-hostname>:8443@<new-ose-console-domain>:443@g' \
 .Restart master
 [source,bash]
 ----
-$ systemctl restart atomic-openshift-master
+$ systemctl restart origin-master
 ----
 
 == References
