@@ -34,7 +34,7 @@ $ oc create -f openshift/endpoint.yaml
 .Create routing layer
 [source,bash]
 ----
-$ sed -i 's/<template-ose-console-domain>/<new-ose-console-domain>:443/g' \
+$ sed -i 's/<template-ose-console-domain>/<new-ose-console-domain>/g' \
 openshift/route.yaml
 $ oc create -f openshift/route.yaml
 ----
@@ -42,7 +42,7 @@ $ oc create -f openshift/route.yaml
 .Edit master configuration
 [source,bash]
 ----
-$ sed -i 's/https://<ose-master-hostname>:8443/<new-ose-console-domain>:443/g' \
+$ sed -i 's@https://<ose-master-hostname>:8443@<new-ose-console-domain>:443@g' \
 /etc/origin/master/master-config.yaml
 ----
 
