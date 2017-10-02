@@ -27,7 +27,7 @@ $ oc create -f openshift/service.yaml
 [source,bash]
 ----
 $ sed -i 's/<template-master-ip-address>/<ose-master-ip>/g' \
-openshift/service.yaml
+openshift/endpoint.yaml
 $ oc create -f openshift/endpoint.yaml
 ----
 
